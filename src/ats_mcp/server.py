@@ -20,6 +20,8 @@ READ_ONLY = {"readOnlyHint": True, "openWorldHint": True}
 
 mcp = FastMCP(
     name="ATS Jobs",
+    json_response=True,
+    stateless_http=True,
     instructions=(
         "Live job postings from 10 applicant tracking systems (Greenhouse, Lever, Ashby, "
         "Workday, Personio, Recruitee, Teamtailor, Workable, SmartRecruiters, Breezy HR). "
