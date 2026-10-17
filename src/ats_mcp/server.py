@@ -174,7 +174,7 @@ async def health(_request: Request) -> JSONResponse:
 
 def main() -> None:
     mcp.run(
-        transport="sse",
+        transport="http",
         host="0.0.0.0",
         port=int(os.environ.get("PORT", "8080")),
         show_banner=False,

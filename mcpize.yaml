@@ -10,5 +10,5 @@ entry: src/server.py
 build:
   install: pip install -r requirements.txt
 startCommand:
-  type: sse
+  type: http
   command: python -m ats_mcp.server
