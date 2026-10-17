@@ -11,4 +11,4 @@ build:
   install: pip install -r requirements.txt
 startCommand:
   type: http
-  command: python src/server.py
+  command: python -m ats_mcp.server

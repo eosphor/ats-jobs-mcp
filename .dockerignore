@@ -1,0 +1,8 @@
+.git
+.venv
+.mcpize
+__pycache__
+*.pyc
+tests
+*.md
+.env
