@@ -9,11 +9,9 @@ from __future__ import annotations
 import os
 from typing import Any, Dict, List, Optional
 
-import uvicorn
 from fastmcp import FastMCP
-from starlette.applications import Starlette
+from starlette.requests import Request
 from starlette.responses import JSONResponse
-from starlette.routing import Mount, Route
 
 from . import service
 from .vendors import ADAPTERS
@@ -167,16 +165,19 @@ def list_supported_ats() -> Dict[str, Any]:
     }
 
 
-async def health(_request) -> JSONResponse:
+@mcp.custom_route("/health", methods=["GET"])
+async def health(_request: Request) -> JSONResponse:
     return JSONResponse({"status": "ok", "server": "ats-jobs", "tools": 4})
 
 
-mcp_app = mcp.http_app(path="/mcp")
-app = Starlette(
-    routes=[Route("/", health), Route("/health", health), Mount("/", app=mcp_app)],
-    lifespan=mcp_app.lifespan,
-)
+def main() -> None:
+    mcp.run(
+        transport="http",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", "8080")),
+        show_banner=False,
+    )
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", "8080")), log_level="info")
+    main()
