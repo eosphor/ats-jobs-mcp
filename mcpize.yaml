@@ -1,0 +1,14 @@
+version: 1
+name: ats-jobs
+description: |
+  Live job postings from 10 applicant tracking systems (Greenhouse, Lever, Ashby,
+  Workday, Personio, Recruitee, Teamtailor, Workable, SmartRecruiters, Breezy HR).
+  Give a company website or ATS handle and get normalized jobs with filters for
+  keywords, location, remote and an only-new cursor. No API keys, no login.
+runtime: python
+entry: src/server.py
+build:
+  install: pip install -r requirements.txt
+startCommand:
+  type: http
+  command: python src/server.py
