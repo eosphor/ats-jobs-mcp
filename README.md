@@ -1,5 +1,7 @@
 # ATS Jobs MCP server
 
+[![ATS Jobs MCP server](https://mcprush.com/badge/eosphor-ats-jobs-mcp/card.svg)](https://mcprush.com/to/eosphor-ats-jobs-mcp?ref=badge)
+
 Search live job postings straight from public applicant-tracking-system (ATS) APIs. Give a company website or an ATS handle and get normalized, filterable results — no API keys, no login, no scraping of job boards.
 
 Built on the same data model as the [ATS Jobs API & Hiring Signals](https://apify.com/suitable_sunspot/keyless-ats-jobs-api) Apify Actor, but this server calls the ATS endpoints directly, so it runs standalone.
