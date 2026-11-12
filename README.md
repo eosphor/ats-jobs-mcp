@@ -23,6 +23,10 @@ Most competitors cover only Greenhouse. One tool call here reaches the long tail
 
 Every response includes `latest_posted_at`. Pass it back as `posted_after` to get only jobs posted since the previous call — that is the "only new" mode, kept stateless so it works for any number of users.
 
+## Hosted version with a 1.3M-job index
+
+This repository is the free, self-hosted server (the four tools above). The [hosted version on MCPize](https://mcpize.com/mcp/ats-jobs) adds a fifth tool, `search_all_jobs`: one search across a daily-rebuilt index of more than 1.3 million open jobs at 24,000+ company career sites, so you do not need a company list. Free plan: 100 calls a month.
+
 ## Example prompts
 
 - "Find data engineering jobs at Spotify posted in the last two weeks."
