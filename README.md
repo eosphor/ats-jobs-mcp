@@ -25,7 +25,7 @@ Every response includes `latest_posted_at`. Pass it back as `posted_after` to ge
 
 ## Hosted version with a 1.3M-job index
 
-This repository is the free, self-hosted server (the four tools above). The [hosted version on MCPize](https://mcpize.com/mcp/ats-jobs) adds a fifth tool, `search_all_jobs`: one search across a daily-rebuilt index of more than 1.3 million open jobs at 24,000+ company career sites, so you do not need a company list. Free plan: 100 calls a month.
+This repository is the free, self-hosted server (the four tools above). The [hosted version on MCPize](https://mcpize.com/mcp/ats-jobs) adds a fifth tool, `search_all_jobs`: one search across a daily-rebuilt index of more than 1.3 million open jobs at 24,000+ company career sites, so you do not need a company list. Free plan: 20 calls a month (an evaluation); paid plans start at $12 for 10,000 calls.
 
 ## Example prompts
 
@@ -103,8 +103,11 @@ PORT=8080 python src/server.py
 
 ## Pricing on MCPize
 
-- **Free** — 100 tool calls/month, all tools, 10 results per call
-- **Pro $12/month** — 10,000 calls/month, full limits, priority support
+- **Free** — 20 tool calls/month, all tools, 10 results per call (enough to evaluate the index, not to run a pipeline)
+- **Pro $12/month** — 10,000 calls/month, 50 results per call, priority support
+- **Ultra $39/month** — 50,000 calls/month, 50 results per call, 120 calls/minute
+
+The same index is also published as a weekly company-level CSV feed at [roleticker.com](https://roleticker.com/) — free sample, no signup.
 
 ## License
 
